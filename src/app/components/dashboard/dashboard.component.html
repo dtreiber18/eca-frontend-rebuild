@@ -1,7 +1,9 @@
 <h2>Dashboard</h2>
+<button mat-raised-button color="primary" (click)="addItem()">Add Item</button>
 <ul>
   <li *ngFor="let item of items">
     <h3>{{ item.name }}</h3>
     <p>{{ item.description }}</p>
+    <button mat-button color="accent" (click)="editItem(item)">Edit Item</button>
   </li>
 </ul>

@@ -1,0 +1,34 @@
+{
+  "items": [
+    {
+      "id": 1,
+      "name": "Broker Blueprint Level 1",
+      "description": "This is an updated item 1"
+    },
+    {
+      "id": 2,
+      "name": "New Item 2",
+      "description": "This is a newly updated item 2"
+    },
+    {
+      "id": 3,
+      "name": "Another New Item",
+      "description": "This is another new item 3"
+    },
+    {
+      "id": 4,
+      "name": "Extra Item",
+      "description": "This is an additional item"
+    },
+    {
+      "id": "fe1a",
+      "name": "Updated Item (edited)",
+      "description": "Updated description - updated again"
+    },
+    {
+      "id": "6148",
+      "name": "Updated Item",
+      "description": "Updated description"
+    }
+  ]
+}
