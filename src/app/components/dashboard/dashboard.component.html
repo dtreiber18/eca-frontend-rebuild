@@ -1,9 +1,20 @@
-<h2>Dashboard</h2>
-<button mat-raised-button color="primary" (click)="addItem()">Add Item</button>
+<!-- Form for Adding and Editing Items -->
+<form [formGroup]="itemForm">
+  <label for="name">Name:</label>
+  <input id="name" formControlName="name">
+
+  <label for="description">Description:</label>
+  <input id="description" formControlName="description">
+
+  <!-- Buttons to add or update items based on form data -->
+  <button type="button" mat-raised-button color="primary" (click)="addItem()" *ngIf="itemForm.get('id')?.value === null">Add Item</button>
+  <button type="button" mat-raised-button color="accent" (click)="updateItem()" *ngIf="itemForm.get('id')?.value">Update Item</button>
+</form>
+
+<!-- List of Items with Edit Buttons -->
 <ul>
   <li *ngFor="let item of items">
-    <h3>{{ item.name }}</h3>
-    <p>{{ item.description }}</p>
-    <button mat-button color="accent" (click)="editItem(item)">Edit Item</button>
+    {{ item.name }} - {{ item.description }}
+    <button mat-button (click)="editItem(item)">Edit</button>
   </li>
 </ul>

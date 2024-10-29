@@ -11,6 +11,7 @@ import { DashboardComponent } from './components/dashboard/dashboard.component';
 import { ChatbotComponent } from './components/chatbot/chatbot.component';
 import { BlueprintViewerComponent } from './components/blueprint-viewer/blueprint-viewer.component';
 import { MatButtonModule } from '@angular/material/button'; // Import MatButtonModule
+import { ReactiveFormsModule } from '@angular/forms';
 @NgModule({
   declarations: [
     AppComponent,
@@ -27,6 +28,8 @@ import { MatButtonModule } from '@angular/material/button'; // Import MatButtonM
     AppRoutingModule,
     HttpClientModule,
     // other imports...
+    ReactiveFormsModule,
+    // other imports
   ],
   bootstrap: [AppComponent]
 })
