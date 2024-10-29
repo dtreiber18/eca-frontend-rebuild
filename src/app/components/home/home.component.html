@@ -1,1 +1,9 @@
-<p>home works!</p>
+<div [ngSwitch]="currentView">
+    <p *ngSwitchCase="'intro'">Welcome to the intro section!</p>
+    <p *ngSwitchCase="'details'">Here are some details about the app.</p>
+    <p *ngSwitchDefault>Select an option to view more.</p>
+  </div>
+  
+  <button mat-raised-button color="primary" (click)="currentView = 'intro'">Intro</button>
+  <button mat-raised-button color="accent" (click)="currentView = 'details'">Details</button>
+  
