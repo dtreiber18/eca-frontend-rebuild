@@ -11,7 +11,8 @@ import { DashboardComponent } from './components/dashboard/dashboard.component';
 import { ChatbotComponent } from './components/chatbot/chatbot.component';
 import { BlueprintViewerComponent } from './components/blueprint-viewer/blueprint-viewer.component';
 import { MatButtonModule } from '@angular/material/button'; // Import MatButtonModule
-import { ReactiveFormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -26,9 +27,8 @@ import { ReactiveFormsModule } from '@angular/forms';
     MatToolbarModule, // Import toolbar module for <mat-toolbar>
     MatButtonModule,
     AppRoutingModule,
-    HttpClientModule,
-    // other imports...
-    ReactiveFormsModule,
+    FormsModule,         // Add FormsModule here
+    ReactiveFormsModule,  // if already included for previous components
     // other imports
   ],
   bootstrap: [AppComponent]

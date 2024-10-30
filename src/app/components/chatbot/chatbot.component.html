@@ -1,1 +1,22 @@
-<p>chatbot works!</p>
+<div class="chatbot-container">
+    <div class="tone-selector">
+      <label for="tone">Select Tone:</label>
+      <select id="tone" [(ngModel)]="selectedTone" (change)="updateTone()">
+        <option value="formal">Formal</option>
+        <option value="casual">Casual</option>
+        <option value="technical">Technical</option>
+      </select>
+    </div>
+  
+    <div class="chat-window">
+      <div *ngFor="let msg of messages" class="message" [class.user]="msg.user">
+        <span>{{ msg.text }}</span>
+      </div>
+    </div>
+  
+    <form (ngSubmit)="sendMessage()">
+      <input [(ngModel)]="userInput" name="userInput" placeholder="Type a message..." required>
+      <button type="submit">Send</button>
+    </form>
+  </div>
+  
